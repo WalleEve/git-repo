@@ -1,0 +1,11 @@
+-- table creation through plsql procedure
+CREATE OR REPLACE PROCEDURE synsql
+AS
+cur INTEGER;
+rc INTEGER;
+BEGIN
+cur := DBMS_SQL.OPEN_CURSOR;
+DBMS_SQL.PARSE(cur,'CREATE TABLE timex( styme DATE)',DBMS_SQL.NATIVE);
+rc :=DBMS_SQL.EXECUTE(cur);
+DBMS_SQL.CLOSE_CURSOR(cur);
+END;

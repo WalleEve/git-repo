@@ -1,0 +1,146 @@
+Q01: Display MGR and Ename from emp table.
+Ans: Select mgr,ename from emp;
+Q02: Display the records where the job is either SALESMAN or DEPT NO=20.
+Ans: Select * from emp where job='SALESMAN' or deptno=20;
+Q03: Display the record where MGR is blank.
+Ans: Select * from emp where mgr is null;
+Q04: Display all the records where names begin with 'A'.
+Ans: Select * from emp where ename like 'A%';
+Q05: Display the records whose ENAME begins with the letter in between 'K' to 'M'
+Ans: select * from emp where substring(ename,1) between 'K' and 'M';
+Q06: Display all the records whose ENAME contains 5 characters.
+Ans: Select * from emp where lenght(ename)=5;
+Q07: Display total number of employees department wise.
+Ans: select * from emp order by deptno;
+Q08: Display the department that contains maximum employees.
+Ans: select deptno,count(*) from emp group by deptno having count(*)=(select max(counts) from (select count(*) counts from emp group by deptno) a );
+Q09: Display the employee who getting maximum salary.
+Ans: select * from emp where sal=(select max(sal) from emp);
+Q10: Display the last 4 character of each employee.
+Ans: select substring(ename,-4) last4char from emp;
+Ans: select substring(ename,(length(ename)-3)) last4char from emp;
+Q11: Display the year and the total number of employee hired during a year.
+Ans: Select to_char(hiredate,'YYYY') year, count(*) total_empoyees from emp group by hiredate;
+Q12: Display the year and the total number of employee for the year in which maximum numbers of employee were hired.
+Ans: select to_char(hiredate,'yyyy') year, count(*) total_emp from emp group  by hiredate having count(*)= (select max(counts) from (select count(*) counts from emp group by hiredate) a );
+Q13: Display the record for all employees who have the same jb as emp no 7838.
+Ans: select * from emp where job=(select job from emp where empno=7838);
+Q14: Display all the records where job contains the letter "E"
+Ans: Select * from emp where job like '%E%';
+Q15: Display the records where the salary of the emploee is greater than the salary obtained by 'TURNER'.
+Ans: Select * from emp where sal > (select sal from emp where ename='TURNER');
+Q16: Select all employee who are either 'clerk' or 'salesman' and have salary greater than 1500.
+Ans: select * from emp where (job='CLERK' or job='SALESMAN') and sal>1500;
+Q17: Select all the employee whose name start with 'Th' or 'Lh'
+Ans: select * from emp where ename like'Th%' or ename like'Lh%';
+Q18: Display names, annual salary, comm of those salesperson whose monthly salary > comm.
+Ans: select ename,sal*12 annualsal, comm from emp where sal > nvl(comm,0);
+Q19: Select employees who are with the company for more than 25 years.
+Ans: select * from emp where months_between(sysdate,hiredate)/12 > 25;
+Q20: Display details of those employees who have join the company on same date.
+Ans: Select * from where hiredate in (select hiredate from emp group by hiredate having count(*) >1);
+Q21: Display details of highest paid employee in the EMP table.
+Ans: select * from emp where sal=(select max(sal) from emp);
+Q22: Display the 2nd highest paid employee in the EMP table.
+Ans: select * from ( select rownum id, ename, sal  from emp order by sal desc ) a where id=2;
+Ans: select * from (select * ,rank() over(order by sal desc) rnk from emp) a where rnk=2;  
+Q23: Display DEPT NO which do not have clerk.
+Ans: Select * from emp where deptno not in (select distinct deptno from emp where job='CLERK' );
+Q24: Update sal of all employees by 2000 who are working in the company for more than 15 years and drawing sal < 4000.
+Ans: update emp set sal=sal+2000 where months_between(sysdate,hiredate)/12 > 15 and sal < 4000;
+Q25: Display Ename, Hiredate in ascending order.
+Ans: select ename,hiredate from emp order by ename,hiredate;
+Q26: Suppose a table contain thousand data and you are needed to select the 2nd last record from the table. Write the query.
+Ans: select * from ( select rowid id, empno, ename, job, sal, hiredate from emp ) a where id=(select count(*)-1 from emp);
+Q27: Print the list of employees displaying last salary if exactly 1500. Display on target if less than 1500.
+Ans: select empno, ename, case when sal=1500 the sal when sal>1500 then 'On Target' end sal from emp; 
+Q28: Display DEPT NO and the name of the employee who gets minimum salary in each department.
+Ans: Select deptno,ename from emp where sal in (select min(sal) from emp group by deptno);
+Q29: Display ENAME , annual salary and comm of overy employee in DEPT NO 30 and fill the comm. Field with 0 of it doesnot contain any value.
+Ans: select ename, (sal+nvl(comm,0)*12) annual_sal, nvl(comm,0) from emp where deptno=30;
+Q30: Display details of that employee who have no manager.
+Ans: select * from emp where mgr is null;
+Q31: Display details of those employees who are clerk and whose salary lies between 1000 and 2000.
+Ans: select * from emp where job='CLERK' and sal between 1000 and 2000;
+Q32: List the employee by name, slary, and department name for every employee in the company except clerks, sort on slary , display the highset slary first.
+Ans: Select a.ename, a.sal, (select dname from dept where deptno=a.deptno) deptname  from emp a where job !='CLERK' order by sal DESC;
+Q33: Display Name and Total Remuneration for all employees.
+Ans: Select ename, sal+nvl(comm,0) remuneration from emp;
+Q34: List the employee name and salary increased by 20%.
+Ans: select ename, sal, sal+(sal/100)*20 from emp ;
+Q35: Display each employee name with hiredate and salary review date. assuming review date is first year after hire date.
+Ans: Select ename, hiredate, hiredate+365 reviewdate from emp;
+Ans: Select ename, hiredate, to_char(hiredate,'dd-mm')||to_char(to_number(to_char(hiredate,'yyyy'))+1)  reviewdate from emp;
+Q36: Find out how many managers are there without listing them.
+Ans: select count(*) from (select distinct mgr from emp where mgr is not null) a;
+Q37: Find the average salary and avg Total Remuneration for each job types. 
+Ans: select job, avg(sal) avg_sal, avg(sal+nvl(comm,0)) avg_remu from emp group by job;
+Q38: Find the job that was filled in the first half of 1983 and the same job that was filled during the same period of 1984.
+Ans: select job from emp where hiredate between '1 jan 1983' and '30 jun 1983'  and  '1 jan 1984' and '30 jun 1984';
+Ans: select a.* from ( select job from emp where hiredate between '1 jan 1983' and '30 jun 1983') a, (select job from emp where hiredate between '1 jan 1984' and '30 jun 1984') b where a.job=b.job;
+Q39: List all employees by Name and Number along with their manager's details.
+Ans: select b.Empno emplNo, b.Ename emplName, a.Empno mgrNo, a.Ename mgrName, a.job mgrJob, a.sal mgrSal from emp a, emp b where a.empno=b.mgr;
+Q40: Write the query to display details for any employee who earns a slary greater that the average for their department. Sort in Deparment Number order.
+Ans: select a.* from emp a, (select avg(sal) avgsal, deptno from emp group by deptno) b where a.sal > b.avgsal and a.deptno=b.deptno;
+Q41: Find out the employee name, sal , deptno, who earns grater than every employee in department no 30.
+Ans: select * from emp where sal>(select max(sal) from emp where deptno=30);
+Q42: Find the department having maximum employees.
+Ans: Select deptno from emp group by deptno having count(*)=(select max(temp) from (select count(*) temp from emp group by deptno  ));
+Q43: Find the employee who earns more than 'MILLER';
+Ans: Select * from emp where sal >(select sal from emp where ename='MILLER');
+Q44: Find all the person who are not MANAGERS.
+Ans: Select * from emp where empno not in (select distinct nvl(mgr,0) from emp);
+Q45: Find the name of person getting same salary in different department.
+Ans: Select * from emp where sal in (select sal from emp group by deptno having 
+
+   
+
+
+
+
+
+
+
+
+ 
+ create table employee
+(
+empno number,
+ename varchar
+);
+
+create table dept
+(
+deptno number,
+dnmae varchar
+);
+
+create table emp_dept_map
+(
+empno number,
+deptno number
+);
+
+
+insert into employee values (1,'sayed'),(2,'eva'),(3,'sabeeha');
+insert into dept values (1,'devlopment'),(2,'hr'),(3,'account');
+insert into emp_dept_map values (1,1),(3,2);
+
+
+select * from employee ;
+select * from dept ;
+select * from emp_dept_map ;
+
+select a.*, b.* from employee a, dept b, emp_dept_map c
+where a.empno=c.empno and b.deptno=c.deptno;
+
+select a.*, b.* from employee a
+left outer join emp_dept_map c on (a.empno=c.empno)
+join dept b on (b.deptno=c.deptno); 
+
+
+select a.* , b.* from  employee a left outer join emp_dept_map c on a.empno=c.empno
+left outer join  dept b on b.deptno=c.deptno;
+
+
+ 

@@ -1,0 +1,25 @@
+Q1: What are various types of quries?
+Ans: The types of quries 
+1. Normal Queries
+2. Sub Queries
+3. Co-related quries
+4. Nested Queries 
+5. Compound queries
+
+Q2: What is transaction?
+ans: A transtaction is a set of sql tatements between any two COMMIT and ROLLABCk statemnt.
+Q3: What is implecit cursor and how is it used by oracle ?
+ans: An Implecit cursor is a cursor which is internaly created by oracle .It is created by oracle for aeach individual sql statement.
+Q4: Which is the folloning is not a schema object: INDEX,TABLE,PUBLIC,SYNONYMS,TRIGGERS and PACKAGES?
+ans: PUBLIC SYNONYMS 
+Q5: What is pl/sql
+ans: pl/sql is ORacle's Procedural Language extention to sql.The  language inclueds object oriented programming techninque
+     such as encapsulation .Function overloading ,information hiding all about inheritance,and so brings atate-of-the-art programming to the oracle database 
+	 server and a verity of oracle tools.
+Q6: is there a PL/SQL Engine in sql*plus?
+ans: No, Unlike oracle forms,Sql* plus does not have a PL/SQL engine.Thus all PL/SQL are send directly to thew database engine for execution
+     This makes it much more efficient as SQL statements are not stripped off and send to the database individually.
+Q7: Is there a limit on the size of PL/SQL block?
+ans: Currently the maximum parsed/compiled size of a PL/SQL block is 64k and the maximum code size os 100k. We can run the folling select statemnent 
+     to query the size of an existing package or procedure. SQL> Select * from dba_object_size where name='procedure_name'.
+	 

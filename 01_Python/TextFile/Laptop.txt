@@ -1,0 +1,6 @@
+Name   processor    ram   price  
+....   .........    ...   .....  
+Dell   i3 8th Gen    4    25000  
+Lenovo i3 8th Gen    4    24000  
+Hp     i3 7th Gen    4    28000  
+Acer   i3 8th Gen    4    22000  

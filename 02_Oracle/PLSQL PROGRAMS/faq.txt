@@ -1,0 +1,11 @@
+The Most Common FAQ on Java Source file structure...
+
+Q1: Can a java program contains multiple classes ?
+ans: YES Condition all class name should be different .
+Q2: If a java program contains multiple classes , is it allowed to take main method in every class.
+ans: yes we can declare main method in all the classes but it creates numbers of .class file as many number of main method available,
+      and whe have to execute all the classes with each class name .
+Q3: If a java program contains multiple classes then how many classes can be declared as public ?
+ans: only one
+Q4: 	  
+	  

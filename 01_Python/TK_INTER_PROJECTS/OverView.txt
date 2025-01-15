@@ -1,0 +1,103 @@
+This Tkinter tutorial introduces you to the exciting world of GUI programming in Python.
+tkinter tutorial
+
+Tkinter is pronounced as tea-kay-inter. Tkinter is the Python interface to Tk, which is the GUI toolkit for Tcl/Tk.
+
+Tcl (pronounced as tickle) is a scripting language often used in testing, prototyping, and GUI development. Tk is an open-source, cross-platform widget toolkit used by many different programming languages to build GUI programs.
+
+Python implements the Tkinter as a module. Tkinter is a wrapper of C extensions that use Tcl/Tk libraries.
+
+Tkinter allows you to develop desktop applications. It’s a very good tool for GUI programming in Python.
+
+Tkinter is a good choice because of the following reasons:
+
+    Easy to learn.
+    Use very little code to make a functional desktop application.
+    Layered design.
+    Portable across all operating systems including Windows, macOS, and Linux.
+    Pre-installed with the standard Python library.
+
+This tutorial assumes that you already have Python 3.x installed on your computer. If it’s not the case, you need to install Python first.
+Section 1. Tkinter Fundamentals
+
+    Tkinter Hello, World! – show you how to develop the first Tkinter program called Hello, World!
+    Window – learn how to manipulate various attributes of a Tkinter window including title, size, location, resizability, transparency, and stacking order.
+    Tk Themed Widgets – introduce you to Tk themed widgets.
+    Setting options for a widget – learn various ways to set options for a widget.
+    Command Binding – learn how to respond to events using command bindings.
+    Event Binding – show you how to use the bind() method to bind an event of a widget.
+    Label – learn how to use the Label widget to show a text or image on a frame or window.
+    Button – walk you through the step of creating buttons.
+    Entry – learn how to create a textbox using the Entry widget.
+
+Section 2. Layout Managements
+
+Geometry managers allow you to specify the positions of widgets inside a top-level or parent window.
+
+    pack – show you how to use the pack geometry manager to arrange widgets on a window.
+    grid – learn how to use the grid geometry manager to place widgets on a container.
+    place – show you how to use the place geometry manager to precisely position widgets within its container using the (x, y) coordinate system.
+
+Section 3. Ttk & Tkinter Widgets
+
+Tkinter provides you with some commonly used widgets, which allow you to start developing applications more quickly.
+
+    Text – show a multi-line text input field.
+    Scrollbar – learn how to link a scrollbar to a scrollable widget e.g., a Text widget.
+    ScrolledText – show you how to create a scrolled text widget that consists of Text and vertical scrollbar widgets.
+    Separator – use a separator widget to separate fields.
+    Checkbox – show how to create a checkbox widget.
+    Radio Button – learn how to use radio buttons to allow users to select one of a number of mutually exclusive choices.
+    Combobox – walk you through the steps of creating a combobox widget.
+    Listbox – show you how to display a list of single-line text items on a Listbox.
+    PanedWindow – show you how to use the PanedWindow to divide the space of a frame or a window.
+    Slider – learn how to create a slider by using the Tkinter Scale widget.
+    Spinbox – show you how to use a Spinbox.
+    Sizegrip – guide you on how to use the Sizegrip widget to allow users to resize the entire application window.
+    LabelFrame – show you how to group related widgets in a group using the LabelFrame widget.
+    Progressbar – show you how to use the progressbar widget to give feedback to the user about the progress of a long-running task.
+    Notebook – guide you on how to use the Notebook widget to create tabs.
+    Treeview – walk you through the steps of creating treeview widgets that display tabular and hierarchical data.
+    Frame – learn how to use the Frame widget to group other widgets.
+
+Section 4. Tkinter Examples
+
+    Tkinter example – show you how to build a simple application that converts a temperature from Fahrenheit to Celsius.
+
+Section 5. Object-Oriented Programming with Tkinter
+
+    Creating an object-oriented window – learn how to define an object-oriented window.
+    Creating an object-oriented frame – show you how to define an object-oriented Frame.
+    Developing a full Tkinter object-oriented application – show you how to develop a full Tkinter object-oriented application.
+    Switching between frames – guide you on how to switch between frames in a Tkinter application.
+
+Section 6. Dialogs and Menus
+
+    Displaying a message box – show you how to display various message boxes including information, warning, and error message boxes.
+    Displaying a Yes/No Dialog – show you how to use the askyesno() function to display a yes/no dialog.
+    Display an OK/Cancel Dialog – show you how to use the askokcancel() function to display an OK/Cancel dialog.
+    Display a Retry/Cancel Dialog – show you how to use the askretrycancel() function to display a Retry/Cancel dialog.
+    Show an Open File Dialog – display an open file dialog to allow users to select one or more files.
+    Displaying the Native Color Chooser – show you how to display the native color-chooser dialog.
+    Menu – learn how to add a menu bar and menus to a window.
+    Menubutton – show you how to the Menubutton widget.
+    OptionMenu – Walk you through the steps of creating an OptionMenu widget that provides a list of options in a drop-down menu.
+
+Section 7. Tkinter Themes and Styles
+
+    Changing the ttk theme – how to change the default ttk theme to the new one.
+    Modifying ttk style – show you how to change the appearance of widgets by modifying or extending the ttk style.
+    Understanding ttk elements – help you understand ttk elements and how to use them to change the appearance of widgets.
+    Modifying the appearance of a widget based on its states – show you how to dynamically change the appearance of a widget based on its specific state.
+
+Section 8. Tkinter Asynchronous Programming
+
+    Scheduling a task with the after() method – how to use the after() method to schedule a task that will run after a timeout has elapsed.
+    Developing multithreading Tkinter Applications – show you how to use the threading module to develop a multithreading Tkinter application.
+    Displaying a progressbar while a thread is running – walk you through the steps of connecting a progressbar with a running thread.
+
+Section 9. Advanced Tkinter Programming
+
+    Tkinter MVC – structure a tkinter application using the MVC design pattern.
+    Tkinter validation – show you how to use the Tkinter validation to validate user inputs.
+    Tkinter & Matplotlib – show you how to display a bar chart from the matplotlib in Python.

@@ -1,0 +1,31 @@
+from tkinter import *
+import os
+
+def logout():
+    login_screen.destroy()
+
+def login():
+    global login_screen
+
+    login_screen = Toplevel(root)
+    login_screen.title("Register")
+    login_screen.geometry("300x400+200+200")
+    login_Frame=Frame(login_screen, bd=4, relief=RIDGE, bg="crimson")
+    login_Frame.place(x=0, y=0, width=200, height=200)
+    login_btn = Button(login_Frame, text="logout", command=logout)
+    login_btn.pack()
+
+
+root = Tk()
+root.title("Retail")
+root.geometry("300x400+200+200")
+
+register_screen = Toplevel(root)
+register_screen.title("Register")
+register_screen.geometry("300x400+200+200")
+Manage_Frame=Frame(register_screen, bd=4, relief=RIDGE, bg="crimson")
+Manage_Frame.place(x=0, y=0, width=200, height=200)
+login_btn = Button(Manage_Frame, text="login", command=login)
+login_btn.pack()
+
+root.mainloop()

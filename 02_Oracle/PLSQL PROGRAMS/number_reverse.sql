@@ -1,0 +1,8 @@
+DECLARE
+v_num number(10);
+BEGIN
+FOR v_num IN INVERSE 1..10 LOOP
+DBMS_OUTPUT.PUT_LINE(v_num);
+END LOOP;
+END;
+/

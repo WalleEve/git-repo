@@ -1,0 +1,11 @@
+pip install --upgrade pi wheel setuptools
+
+python -m pip install kivy[base] kivy_examples
+or 
+python -m pip install kivy[base, media] kivy_examples
+
+pip install pygame
+
+pip install cython
+
+100978515034

@@ -1,0 +1,8 @@
+# Accessing Value in a Dictionary:
+To get the value associate with a key, give the name of the dictionary and then place the key inside a set of square brackets.
+
+alien_0 = {'color': "Green"}
+print(alien_0['color'])
+
+alien_0 = {'color': "Green", 'point': 5}
+print(alien_0['point'])
