@@ -1,0 +1,40 @@
+HTML, CSS, JS 
+BootStarp, JQuery: Advance Front End Libraries
+
+
+HTML --> Hypertext Markup Language
+----
+It is Mandattory to Develop a Web Page 
+It Represent the structure of Web Page 
+
+CSS --> Cascading Stle Sheet
+----
+It is used to style a web page.
+
+BootStrap: Provides Predefined Style and much more predefine functionalities
+
+
+Java Script:
+------------
+To add functionality to our HTML web pages.
+
+# Static Response (won't change person to person and time to time)
+	Welcome to Haladigadia
+# Dynamic Response (will be change person to person and time to time)
+	The current date and time:05-03-2025 9:30
+	
+
+HTML      -----> ment for only Static Response 
+HTML + JS -----> ment for dynamic response
+
+
+2. Back end:
+It is the technologies which is used to decide what data to show to the end user on the front end.
+Back end is responsible to generate required response
+That response should be display to the end user by using front end.
+
+In the backend 3 components 
+1. Language: Java, Python, .Net,...
+2. Framework: Java: Struts, JSF, Spring MVC / Python: Django, Flask, Pyramid 
+3. Database: Oracle, MongoDB, MySQL, PostgreSQL
+

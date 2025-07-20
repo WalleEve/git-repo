@@ -1,0 +1,188 @@
+Various Possible ways to specify color:
+---------------------------------------------
+
+h1{
+  color:red;
+}
+
+
+color:rgb(0,0,0)  ---------->  Black
+color:rgb(255,0,0)
+
+r --> red
+g --> green
+b --> blue
+
+The allowed range of values: 0 to 255
+
+for every color 6-digit hexa decimal code is available
+color: #f44e42
+
+
+4. rgba
+color:rgba(255, 255, 255)
+a means alpha  --> Transparency
+range: 0.0 to 1.0
+
+0.0 > fill light
+1.o > full dark
+
+
+# Setting background:
+
+background:
+background-color:
+
+color --> text color
+background-color --> background
+
+
+# How to set the background Image.
+-------------------------------------
+body{
+  background: url(https://plus.unsplash.com/premium_photo-1701534008693-0eee0632d47a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body{
+  background: url(colorful.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+# How to set Border:
+
+img{
+  border-color: red;
+  border-style: groove;
+  border-width: 20px
+}
+
+img{
+  border: red 20px groove;  <--! here order is not important -->
+}
+
+
+
+# Basic CSS Selectors:
+-------------------------
+1. Element Selectors
+2. ID Selectors
+3. Class Selectors
+
+Element Selector:
+-----------------
+/* element selector */
+h1{
+  color:red;
+}
+
+
+ID Selector:
+--------------
+Select an element with given ID. but within HTML, ID should be unique.
+
+<h1 id="specialh1">This the 5th Header</h1>
+
+/* ID selector */
+#specialh1{
+  color: blue;
+}
+
+
+Class Selectors:
+---------------------
+
+select all elements withing the given class and apply styling.
+
+
+
+
+
+Advance CSS selectors:
+----------------------
+
+1. * selector
+----------------
+*{
+  color:white;
+  background: gray
+}
+
+2. Descendant Selector
+-------------------------
+sub-level child tag
+<parent tag>  <child tag>{
+attributes:values;
+}
+ This style is application for child tags
+li a{
+  color:orange;
+  background: gray
+}
+
+body ul li a{
+  color:orange;
+  background: gray
+}
+
+3. Adjacent Selector:
+---------------------------
+
+h1+a{
+color: blue;
+background: yellow;
+}
+
+
+
+4. Attribute Selector
+----------------------------
+input[type="password"]{
+background: yellow;
+}
+
+a[href="http://flipkart.com"]{
+background: red;
+}
+
+
+5. nth of type selector
+-----------------------
+<ul>
+  <li>xyz</li>
+  <li>xyz</li>
+  <li>xyz</li>
+  <li>xyz</li>
+</ul>
+
+<ul>
+  <li>xyz</li>
+  <li>xyz</li>
+  <li>xyz</li>
+  <li>xyz</li>
+</ul>
+
+
+li:nth-of-type(2){
+  color: white;
+  background: red;
+}
+
+ul:nth-of-type(2){
+  color: white;
+  background: red;
+}
+
+
+ul:nth-of-type(even){
+  color: white;
+  background: red;
+}
+
+
+
+CSS Inheritance:
+-------------------

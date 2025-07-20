@@ -1,0 +1,42 @@
+/* h1{
+  /* background: red; */
+  /* background: rgb(89, 181, 166); */
+  /* background:  #14dbba */
+  /* background: rgba(199, 181, 179, 0.9); */
+  /* color: black;
+  border-color: blue;
+  border-width: thick;
+  border-style: dotted;
+} */
+
+/* body{
+  background: url(colorful.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* img{
+  border-color: red;
+  border-style: groove;
+  border-width: 20px
+} */
+
+/*
+img{
+  border: red 20px groove;
+} */
+
+/* element selector */
+h1{
+  color:red;
+}
+
+/* ID selector */
+#specialh1{
+  color: blue;
+}
+
+/* Class selector */
+.special{
+  color:green;
+}

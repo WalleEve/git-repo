@@ -1,0 +1,213 @@
+# Shallow Copy 
+A shallow copy means constructing a new collection object and then populating it with references to the child objects 
+found in the original. In essence, a shallow copy is only one level deep. The copying process does not recurse and 
+therefore won’t create copies of the child objects themselves.
+a = [1, 2, 3, 4]
+b = a 
+
+print(id(a))
+print(id(b))
+
+#Deep Copy
+A deep copy makes the copying process recursive. It means first constructing a new collection object and then recursively 
+populating it with copies of the child objects found in the original. Copying an object this way walks the whole object 
+tree to create a fully independent clone of the original object and all of its children.
+
+import copy 
+
+a = [5, 6, 7, 89]
+b = copy.deepcopy(a)
+
+print(id(a))
+print(id(b))
+
+# Slicing of String 
+	[] operator is called slice operator, which can be used to retrive parts of String.
+	In Python string follows zero based index 
+	The index can be either +ve or -ve.
+
+# Ternary Operator 
+	x = firstValue if condition else secondValue 
+	If condition is True then firstValue will be considered else secondValue will be considered.
+	a, b = 10, 20 
+	x = 30 if a > b else 40 
+	
+	a = 10
+	b = 90
+	c = 60
+	
+	max = a if a > b and a > c else b if b > c else c 
+	print(max)
+	
+# Identity Operators 
+	We can use identity operators for address comparison.
+	2 identity operators are available 
+	1. is 
+	2. is not 
+	r1 is r2 returns True if both r1 and r2 are pointing to the same object.
+	r1 is not r2 returns True if both r1 and r2 are not pointing to the same object. 
+	
+	a = 10 
+	b = 20 
+	print(a is b) # True 	
+
+# Membership Operators:
+	We can use Membership operators to check whether the given object present in the 
+	given collection. It may be String, List, Set, Tuple, or Dic 
+	
+	in -> Returns True if the given object present in the specified collection.
+	not in -> Returns True if the given object not present in the specified collection 
+	
+# split():
+	split function can take space as separator by default, but we can pass anything as separator 
+
+# eval():
+	eval function take a String and evaluate the Result.
+	x = eval("10+20+30")
+	print(x)
+	
+# Command Line Arguments
+	The arguments which are passing at the time of execution are called command line arguments.
+	Note: argv[0] represent Name of the Program. But not the first command line argument.
+	argv[1] represent first command line arguemnt.
+	
+	from sys import argv 
+	for x in argv:
+		print(x)
+		
+	> py test.py 10 20 30 
+	
+
+# SORTING A LIST:
+l = [5, 2, 1, 5, 8]
+
+def sort_list(un_sorted_list):
+    sorted_list = []
+    
+    for i in range(0, len(un_sorted_list)):
+        if len(sorted_list) == 0:
+            sorted_list.append(un_sorted_list[i])
+        else:
+            for j in range(0, len(sorted_list)):
+                if un_sorted_list[i] <= sorted_list[j]:
+                    sorted_list.insert(j, un_sorted_list[i])
+                    break 
+                else:
+                    if len(sorted_list) -1 == j:
+                        sorted_list.append(un_sorted_list[i])
+                    else:
+                        continue 
+    return sorted_list
+
+sl = sort_list(l)
+print(sl)
+
+
+# Arrays, strings, and linked lists
+
+@Arrays
+Definition:
+An array is a collection of elements, each identified by an index or a key. They are stored in contiguous memory locations.
+
+Characteristics:
+Fixed Size: The size of an array is determined at the time of creation and cannot be changed.
+Indexed: Each element in the array can be accessed using an index, typically starting from 0.
+Efficient Access: Accessing elements is very fast, O(1) time complexity.
+Operations:
+Access: array[index]
+Update: array[index] = value
+Traversal: Iterating through all elements using a loop.
+Insertion/Deletion: Expensive operations if they involve shifting elements.
+Example (Python):
+python
+Copy code
+arr = [1, 2, 3, 4, 5]
+print(arr[2])  # Accessing the third element
+arr[2] = 10   # Updating the third element
+print(arr)
+
+@Strings
+Definition:
+A string is a sequence of characters. It is often considered as an array of characters.
+
+Characteristics:
+Immutable: In many programming languages, strings are immutable, meaning once created, they cannot be changed.
+Indexed: Each character in the string can be accessed using an index.
+Operations:
+Concatenation: Combining two or more strings.
+Slicing: Extracting a substring from a string.
+Search: Finding a substring within a string.
+Length: Getting the number of characters in the string.
+Example (Python):
+python
+Copy code
+s = "Hello, World!"
+print(s[7])       # Accessing the eighth character
+substring = s[7:] # Slicing from the eighth character to the end
+print(substring)
+
+@Linked Lists
+Definition:
+A linked list is a linear data structure where elements are stored in nodes, and each node points to the next node using a reference or a pointer.
+
+Characteristics:
+Dynamic Size: Can grow and shrink during runtime by allocating and deallocating memory.
+Nodes: Each node contains the data and a reference to the next node.
+Sequential Access: Accessing elements involves traversing the list from the beginning.
+Types:
+Singly Linked List: Each node points to the next node.
+Doubly Linked List: Each node points to both the next and previous nodes.
+Circular Linked List: The last node points back to the first node.
+Operations:
+Insertion: Adding a node at the beginning, end, or any position.
+Deletion: Removing a node.
+Traversal: Visiting each node in the list.
+Example (Python):
+python
+Copy code
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+
+    def print_list(self):
+        curr_node = self.head
+        while curr_node:
+            print(curr_node.data, end=" -> ")
+            curr_node = curr_node.next
+        print("None")
+
+llist = LinkedList()
+llist.append(1)
+llist.append(2)
+llist.append(3)
+llist.print_list()
+
+Comparison
+Feature				Array						String						Linked List
+------------------  ------------------------    -------------------------   -----------------------------
+Size				Fixed						Fixed (Immutable)			Dynamic
+Memory Allocation	Contiguous					Contiguous					Non-contiguous
+Access Time			𝑂(1)						O(1)						O(n)
+Insertion/Deletion	Expensive (shifting req.)	Expensive (new allocation)	Efficient (depends on position)
+Flexibility			Low							Low							High
+
+These data structures serve different purposes and are chosen based on the specific needs of the application, considering factors like memory usage, access time, and ease of modification.
+                    
+                    
+    	
+ 

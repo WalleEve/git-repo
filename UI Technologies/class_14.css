@@ -1,0 +1,17 @@
+/* The Box Model
+-------------------
+Every HTML Element is a represented as a rectangular box.
+Each bos has 4 edges.
+1. Content
+2. Padding
+3. Border
+4. Margin
+ */
+h3{
+  border: 20px solid red;
+  width:25%;
+  text-align: center;
+  border-top: 5px solid blue;
+  padding-top: 20px;
+  margin-top: 100px; 
+}

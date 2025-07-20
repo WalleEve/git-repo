@@ -1,0 +1,25 @@
+# Boot Strap:
+Bootstrap is the most commonly used framework for front end development.
+Bootstrap provides several predefined libraries for CSS and java script.
+
+getbootstrap.com
+
+
+How to connect to bootstrap:
+1. By using CDN (Content Delivery Network)
+2. Locally
+
+CDN:
+Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load our CSS.
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+bootstrap.min.css
+
+
+1. button
+2. Jumbotron
+3. Form
+4. Navbar
+5. Grid

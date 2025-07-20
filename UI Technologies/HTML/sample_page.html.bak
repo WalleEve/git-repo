@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sample Page</title>
+	</head>
+
+	<body>
+		<p> <em><strong>This is First Line</strong></em></p>
+		<p> This is <b>Second Line</b></p>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+
+(MyDjangoVenv) D:\Code\git-repo\DjangoWithAngular\MyDjango>py manage.py shell
+8 objects imported automatically (use -v 2 for details).
+
+Python 3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> Questions.objects.all()
+<QuerySet []>
+>>> from django.utils import timezone
+>>> q = Questions(question_text="What's new?", pub_date=timezone.now())
+>>> q.save()
+>>> q.id
+1
+>>> q.question_text
+"What's new?"
+>>> q.pub_date
+datetime.datetime(2025, 6, 4, 17, 51, 30, 558184, tzinfo=datetime.timezone.utc)
+>>> q.question_text = "What's up?"
+>>> q.save()
+>>> Questions.objects.all()
+<QuerySet [<Questions: Questions object (1)>]>

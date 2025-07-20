@@ -1,0 +1,53 @@
+HTML Validations
+----------------------
+1. email
+2. required
+3. min and max length
+4. only digits are allowd
+5. only lower case alphabet
+etc
+
+
+
+In Regular Expressions:
+[0-9]
+[a-z]
+[A-Z]
+[a-zA-Z]
+[a-zA-Z0-9]
+*
+. - any character  .{5,10}
+[abc] -
+A* - Any number if a's including zero number
+A+ -Atlest one a
+
+Case 1: The value should contain minimum 5 characters and maximum 10 characters. .{5,10}
+Case 2: The value should contain only digits, exactly 10  "'[0-9]{10}'"
+Case 3:  "[6-9][0-9]{9}"
+
+Example:
+---------------------------
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validations</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+
+      Enter value: <input type="text" name="val" value="" pattern=".{5,10}" title="Minimun 5 characters and Maximum 10 characters are allowed">
+      Enter Phone Number: <input type="text" name="phone" value="" pattern="[0-9]{10}" title="Invalid Number">
+
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>
+
+Incluse Spaces in the HTML:
+----------------------------
+1. &nbsp; -- For single space
+2. &ensp; -- for 2 Spaces
+3. &emsp; -- for 4 spaces
+4. <br>  -- to add line break
+5. <hr> -- (Horizontal Rule)

@@ -1,0 +1,77 @@
+/* Case-1 Make all the <p>s that are nested inside div with 25px @font-size */
+
+div p{
+  font-size: 25px;
+}
+
+/* case-2 Give all <p>s inside 3rd div blue background and text color is white */
+div:nth-of-type(3) p{
+  background: blue;
+  color: white;
+}
+
+ /* Case-3: Give 2nd <2> inside 3rd div, 5px red solid border */
+div:nth-of-type(3) p:nth-of-type(2){
+  border: 5px solid red
+}
+
+/* Case-4: Make <em> tag in he 2nd div with white color 30px font-size and gree background */
+
+div:nth-of-type(2) em{
+  color: white;
+  background: green;
+}
+
+
+/* Fonts and Text in the css: */
+/* 1. font-family
+2. font-size
+3. font-width
+4. line-height
+5. text-align
+6. text-decoration */
+
+h3{
+  font-family: Impact;
+}
+
+#fontPara{
+  font-family: Franklin Gothic Medium;
+  font-size: 20px;
+}
+
+/* 2.0 em units also known as dynamic font size (relative font size)
+double of parent tag font size  */
+span{
+  font-size: 2.0em;
+}
+
+
+/* font-weight  100-900*/
+p{
+  font-weight: 300;
+}
+
+
+/* line-height  The spacve between 2 lines*/
+/* text-align */
+body{
+  line-height: 1;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+
+h3{
+  font-family: "Big Shoulders Inline", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+h1{
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

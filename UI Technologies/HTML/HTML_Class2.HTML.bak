@@ -1,0 +1,118 @@
+<!-- HTML -->
+
+
+
+Structure of HTML Page: 
+Thre are two Parts in every HTML pages.
+
+1. Head
+2. Body
+
+# Head: It contains meta data
+	like title, description, author, keywords etc
+	If we wants to add CSS file in our HTML then we have to define the link in the header part only.
+	JS files as well will be defined in the header block.
+
+# Body: Origianl Data
+	
+	
+# HTML Basic Structure:
+
+<!doctype html>
+<html>
+	<head>
+		<title>Sample Page</title>
+	</head>
+
+	<body>
+		<p> <em><strong>This is First Line</strong></em></p>
+		<p> This is <b>Second Line</b></p>
+	</body>
+</html>
+
+<title> : Use to define the Webpage Page Title Name
+<p> : Stands for Paragraph
+<strong> : Tag used to BOLD the letter
+<b> : Tag is also used to BOLD the leeter, but this is a Lagacy (Not Recommadade)
+<i> : Tag is used to make letter Italic, but this is a Lagacy 
+<em>: tag is used to make the letter Italic 
+
+<ol>  <!-- Order List -->
+	<li> Python </li>  <!-- List Item -->
+	<li> Django </li>
+	<li> Data Science </li>
+	<li> DRF </li>
+</ol>
+
+<ul> <!-- Un-Ordered List -->
+
+# Nested Lists:
+-----------------
+
+<!doctype html>
+<html>
+	<head>
+		<title>Sample Page</title>
+	</head>
+
+	<body>
+		<h1> The Menu Items: </h1>
+		<ol>
+			<li> Biryani </li>
+				<ul>
+					<li> Chicken Biryani </li>
+					<li> Mutton Biryani </li>
+					<li> Fish Biryani </li>
+
+				</ul>
+			<li> Tandoor </li>
+				<ul>
+				<li>Sick Kabaab</li>
+				<li>Boti Kabaab</li>
+				<li>Tangri Kabaab</li>
+				</ul>
+
+			<li> Stater </li>
+				<li>Chicken 65</li>
+		</ol>
+
+	</body>
+</html>
+
+# Attributes:
+---------------
+We can pass attributes to the tags, which will provide some extra information
+
+# Setting Image Inside HTML:
+-----------------------------
+<img x=10 y=20>
+
+<img src="walrus.jpg" alt="image is missing will be uploaded soon"> 
+
+src : Source of image
+alt: Alternate 
+
+image tag is self closing tag, so we do not need to close tag.
+
+# Creating Hyperlinks by using anchor tag:
+<a href="first.html"> Clikc here to get more videos </a>
+
+
+# All Tags: 
+--------------------------------------------
+Commnet Tag : <!-- -->
+Header Tag : <h1> </h1> ... <h6> </h6>
+Paragraph Tag: <p> </p>
+Bold Tag: <strong> </strong>
+Italic Tag: <em> </em>
+list Tag: 
+	Order Tag: <ol> <li> </li> </ol>
+	Un-order Tag: <ul> <li> </li> </ul>
+Image Tag: <img src="photo1.jpg" alt="image is missing">  <!-- Image Tag is Self closing Tag -->
+Anchor Tag: <a href="http://youtube.com"> youtube </a>
+
+############################
+
+Div and Span Tags: 
+------------------
+Div: Division 

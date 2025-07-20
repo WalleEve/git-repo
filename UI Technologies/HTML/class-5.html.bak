@@ -1,0 +1,129 @@
+# Creation of HTML Forms:
+------------------------------
+
+Within the form we have to collect end user input.
+TO collect and user input, we have to use <input> tag.
+
+Input Datatype:
+text
+email
+password
+radio
+checkbox
+color
+
+<input type='text' name='' value=''>  <!-- Input Tag is a Self closing Tag -->
+
+<input type='password' name='' value=''>
+<input type='email' name='' value=''>
+
+type:
+name:
+value: To provide the default value.
+placeholder :  attribute is just to provide the hint but not the default value.
+
+
+<form>
+
+</form>
+
+required attribute:
+-------------------
+
+
+Creation of Labels for HTMl Elements:
+--------------------------------------
+Name: <input type='text' name='name' value='Enter name'>
+
+<label for="name"> Enter Name:</label>
+<input id='name' type='text' name='uname' value='Enter name'>
+
+
+
+The value of "for" attribute should be same the the "id" attribute.
+
+Implementing Radio Button:
+---------------------------
+<form action='sample.html' method='GET'>
+<h3> Are you Married </h3>
+
+<label for="yes">Yes</label>
+<input id='yes' type='radio' name='married', value='yes'>
+<label for="no">No</label>
+<input id='no' type='radio' name='married', value='no'>
+
+<input type='submit', name='', value='login'>
+
+</form>
+
+<form action='sample.html' method='GET'>
+<h3> Gender </h3>
+
+<label for="m">Male</label>
+<input id='m' type='radio' name='gender', value='male'>
+
+<label for="f">Female</label>
+<input id='f' type='radio' name='gender', value='female'>
+
+<label for="t">Transgender</label>
+<input id='t' type='radio' name='gender', value='transgender'>
+
+<input type='submit', name='', value='login'>
+
+</form>
+
+Multiple submit button:
+-----------------------------
+<form action='sample.html' method='GET'>
+	<label for='name'>Name</label>
+	<input id='name' type='text' name='' value=''><br>
+	<input type='submit', name='add', value='Add'><br>
+	<input type='submit', name='delete', value='Delete'><br>
+	<input type='submit', name='update', value='Update'>
+
+</form>
+
+--------------------------------------
+<!-- Check Box Button -->
+<form>
+
+<form action='result.html' method='GET'>
+<h3> Q1.Select the capital of Odisha  </h3>
+<input type='radio' name='q1', value=''>'Bhubaneswar'<br>
+<input type='radio' name='q1', value=''> 'Hyderabad'<br>
+<input type='radio' name='q1', value=''>'Cuttack'<br>
+<input type='radio' name='q1', value=''>'Jajpur'<br>
+
+<input type='submit', name='', value='Submit'>
+
+</form>
+
+<!-- Radio Button -->
+<form>
+
+<form action='result.html' method='GET'>
+<h3> Q2.Name all the places belongs to Odisha  </h3>
+<input type='checkbox' name='q2', value=''>'Bhubaneswar'<br>
+<input type='checkbox' name='q2', value=''> 'Hyderabad'<br>
+<input type='checkbox' name='q2', value=''>'Cuttack'<br>
+<input type='checkbox' name='q2', value=''>'Jajpur'<br>
+
+<input type='submit', name='', value='Submit'>
+
+</form>
+
+<!-- Drop Down -->
+<form action='result.html' method='GET'>
+	<h1> Choose your State</h1>
+	<select name='state' multiple>
+		<option value='ap'>Andhra Pradesh<br>
+		<option value='ts'>Telanga<br>
+		<option value='ka'>Karnataka<br>
+		<option value='od'>Odisha<br>
+		<option value='tn'>Tamil Nadu<br>
+		<option value='kl'>Kerala<br>
+
+	</select>
+</form>
+
+

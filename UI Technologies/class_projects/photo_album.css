@@ -1,0 +1,19 @@
+img{
+  height: 300px;
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+/*
+img:hover{
+  border: 2px groove gray;
+} */
+
+p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  border-bottom: 2px solid gray;
+  padding-bottom: 10px;
+}

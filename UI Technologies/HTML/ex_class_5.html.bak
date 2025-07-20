@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title> Sample Class 5</title>
+	</head>
+	<body>
+		<h1> Student Registration Form </h1>
+		<form action='result.html' method='GET'>
+			Username <input type='text' name='', value='user name' required>		
+			Password <input type='password' name='', placeholder='password' required>
+			<input type='submit', value='login'>
+		</form>
+		<br>
+		<form action='result.html' method='GET'> 
+			<label for="name"> Enter Name:</label>
+			<input id='name' type='text' name='uname' value='Enter name'>
+		</form>
+		<br>
+		<form action='result.html' method='GET'>
+			<h3> Are you Married </h3>
+
+			<label for="yes">Yes</label>
+			<input id='yes' type='radio' name='married', value=''>
+			<label for="no">No</label>
+			<input id='np' type='radio' name='married', value=''>
+
+			<input type='submit', name='', value='login'>
+
+		</form>
+		<br>
+		<form action='sample.html' method='GET'>
+			<label for='name'>Name</label>
+			<input id='name' type='text' name='' value=''><br>
+			<input type='submit', name='add', value='Add'><br>
+			<input type='submit', name='delete', value='Delete'><br>
+			<input type='submit', name='update', value='Update'>
+
+		</form>
+
+		<br>
+		<br>
+		<!-- Radio Button -->
+		<form>
+
+		<form action='result.html' method='GET'>
+		<h4> Q1.Select the capital of Odisha  </h3>
+		<input type='radio' name='q1', value='bbs'>Bhubaneswar<br>
+		<input type='radio' name='q1', value='hyd'>Hyderabad<br>
+		<input type='radio' name='q1', value='ctc'>Cuttack<br>
+		<input type='radio' name='q1', value='jjkr'>Jajpur<br>
+
+		<input type='submit', name='', value='Submit'>
+
+		</form>
+		<br>
+		<!-- Checkbox Button -->
+		<form>
+
+		<form action='result.html' method='GET'>
+		<h4> Q2.Name all the places belongs to Odisha  </h3>
+		<input type='checkbox' name='q2', value='bbs'>Bhubaneswar<br>
+		<input type='checkbox' name='q2', value='hyd'>Hyderabad<br>
+		<input type='checkbox' name='q2', value='ctc'>Cuttack<br>
+		<input type='checkbox' name='q2', value='jjkr'>Jajpur<br>
+
+		<input type='submit', name='', value='Submit'>
+
+		</form>
+		<!-- Drop Down -->
+		<form action='result.html' method='GET'>
+			<h4> Choose your State</h4>
+				<select name='state'>
+					<option value='ap'>Andhra Pradesh<br>
+					<option value='ts'>Telanga<br>
+					<option value='ka'>Karnataka<br>
+					<option value='od'>Odisha<br>
+					<option value='tn'>Tamil Nadu<br>
+					<option value='kl'>Kerala<br>
+
+				</select>
+		</form>
+		<!-- Select Multiple Values -->
+		<form action='result.html' method='GET'>
+			<h4> Choose your State (can select multiple)</h4>
+				<select name='state' multiple>
+					<option value='ap'>Andhra Pradesh<br>
+					<option value='ts'>Telanga<br>
+					<option value='ka'>Karnataka<br>
+					<option value='od'>Odisha<br>
+					<option value='tn'>Tamil Nadu<br>
+					<option value='kl'>Kerala<br>
+
+				</select>
+		</form>
+		<!-- Text Area -->
+		<form action='result.html' method='GET'>
+			<h1> Enter Feedback</h1>
+			<textarea  name='feedback' rows='8' cols='80'>
+			</textarea> <br>
+			<input type='submit' name='' value='submit'>
+		</form>
+
+	</body>
+</html>  

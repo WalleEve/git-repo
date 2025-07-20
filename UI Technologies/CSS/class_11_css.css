@@ -1,0 +1,38 @@
+/* *{
+  color:white;
+  background: gray
+}
+
+
+li a{
+  color:orange;
+  background: gray
+}
+
+
+h1+a{
+  color:red;
+  background:gray;
+} */
+
+/*
+h4+ul{
+  color:yellow;
+  background:gray;
+}
+
+
+a[href="https://flipkart.com"]{
+  color: red;
+} */
+
+/*
+li:nth-of-type(2){
+  color: white;
+  background: red;
+} */
+
+li:nth-of-type(even){
+  color: Black;
+  background: gray;
+}

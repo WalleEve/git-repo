@@ -1,0 +1,87 @@
+Daily Expenses Log:
+Frame 1:
+date <calender popup> item <text entry> summery <text entry> payment_type <drop down options (Cash, PhonePay, GPay, Online Banking Aap, ATM Card)> amount <numeric entry>
+
+Frame 2: Search Bar for Expenses based on Date
+
+Frame 3:
+Grid view of the all Entrys or Search Result 
+Enable to Edit the Entry except date
+
+Submit button [once we click on submit button all the entry or altered information should be stored in the table]
+
+
+Store all the entry in a Expenses_Log Table
+
+
+Admin:
+
+in admin tab add 3 tab as user, account, personal
+
+USER TAB:
+frame1> 
+	reg phone: information last 4 digit  [update button] once click popup a new window for old phone number and check if the number is already register with the user new phone number and a update button
+	reg email: information last 4 chracter [update button] once click popup a new window for old email and new email and valid the old email if already register
+
+frame 2> 
+ reset password:
+ old password: 
+ new password:
+ confirm password: 
+ reset button 
+
+ACCOUNT TAB:
+Frame 1:
+Name:
+Bank:
+Ac/No:
+IFSC:
+Reg Mob:
+Reg Email:
+Net Banking User:
+Password:  [encrpted]
+ATM Card No:
+CVV:
+PIN: [encripted]
+UPI Reg Mobile:
+UPI ID: 
+UIP Pin: [encripted]
+
+[Add button]
+
+Frame 2:
+Grid View of the Account Details
+
+
+PERSONAL:
+Frame1:
+Account Holder Name:
+DOB:
+Address:
+PAN:
+AADHAR:
+PASSPORT:
+Voter ID:
+
+Frame 2:
+Grid view of the personal Detila 
+show only last 4 digit for PAN, Aadhar, Passport, Voter ID
+
+
+CashGuard/
+¦-- main.py               # Entry point of the application
+¦-- ui/
+¦   +-- login.py          # Login window
+¦   +-- main_window.py    # Main application window with tabs
+¦-- tabs/
+¦   +-- daily_expenses.py # Daily expenses management
+¦   +-- saving_log.py     # Saving log management
+¦   +-- borrowings.py     # Borrowings log management
+¦   +-- admin/
+¦   ¦   +-- user_tab.py   # User details and management
+¦   ¦   +-- account_tab.py # Account details and management
+¦   ¦   +-- personal_tab.py # Personal details management
+¦-- models/
+¦   +-- data_store.py     # Simulated data storage
+¦-- utils/
+¦   +-- helpers.py        # Utility functions (if needed)

@@ -1,0 +1,44 @@
+h1{
+  text-align: center;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+table{
+  margin: auto;
+}
+
+td{
+  height: 300px;
+  width: 150px;
+  /* background: red; */
+  border: 3px solid white;
+}
+
+#one{
+  background: #70369d;
+}
+#two{
+  background: #4B0082;
+}
+
+#three{
+  background: #0000FF;
+}
+
+#four{
+  background: #008000;
+}
+
+#five{
+  background: #FFFF00;
+}
+
+#six{
+  background: #FFA500;
+}
+
+#seven{
+  background: #FF0000;
+}

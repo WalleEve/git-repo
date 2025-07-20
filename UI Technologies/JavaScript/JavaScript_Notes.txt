@@ -1,0 +1,371 @@
+1. Java Script Developer's console.
+2. 5 Basic Java Script Primitive data types
+3. Declare variables
+4. The 3 most commonly used JS function.
+
+snippets --> Java Script Developer's console.
+
+How to lunch:
+Open the browser and click F12
+or Inspect the Page and console is the second option.
+
+
+TO clear the console texts we can call clear() function.
+
+# Basic Java Script Primitive data types
+----------------------------------------
+
+1. number (any digit 10, 10.5, -10   everything is number )
+2. String (Any sequence of characters either within single quotes or double quotes)
+    'durga'
+    "durga"
+
+    + Operator : concatination
+    'durga' + 'soft'
+    'durga' + 10
+    'durga' + true
+
+    If both arguments are number type then + operator acts as arithmetic operator
+    if at least one or more arguments are string the + operator acts as concatenation operator
+
+    'durga\nsoft'  \n is escape character as n stand for new line
+    'durga\tsoft'  \t is escape character as t stand for tab
+
+
+     Find length of the string:
+     s.length
+     'durga'.length  < 5
+
+     How to access character of a string
+     s[2]
+     'durga'[2]  < r
+
+
+
+      Note: only positive index is accepted in Java Script.
+
+
+3.  boolean:
+  true
+  false
+
+
+var is a keyword is used to declare a variable.
+
+var x = 10
+var age = 60
+var isMarried = true
+var name = 'durga'
+
+Dynamically Typed Language
+
+typeof x
+< "number"
+
+
+Variable naming convention in JavaScript:
+camel case:
+studentMobileNumber  --> camel case (Java | Java Script)
+student_mobile_number --> snake case (Python)
+student-mobile-number ---> Kebab Case (LISP)
+
+4. undefined type:
+  if the value is not available then it is undefined type
+  var x;
+  Variable declared but not initialized
+
+5. null
+  null means nothing.
+  if the value of a variable is null it means it is not pointing to any value.
+
+
+The 3 most commonly used method of Java Script:
+----------------------------------------------------
+1. alert()
+2. consol.log()
+3. prompt()
+
+we need <script> tag to link the Java script file
+
+// --> Act as Comment
+
+Operators:
+---------------
+1. arithmetic Operators
+  + , -, * , /, %, **
+
+2. Comparison Operators
+  <, <=, >, >=, ==, !=, ===
+
+  Difference between == and ===:
+    == operator is equality operator. Here only value are checked but not the data types.
+    === operator is strict equality operator. Here value and type both are checked.
+
+    10 == 10    <. True
+    10 == '10'  <. True
+    10 == 10.0  <. True
+
+    10 === 10    <. True
+    10 === '10'  <. False
+    10 === 10.0  <. True
+
+    true == '1'        <. true
+    true == 0          <. true
+    true == 1          <. true
+    false == 0         <. true
+    false == 1         <. false
+    null == undefined  <. true
+
+    10 / 0         <. Infinity
+    0/0            <. NaN  (Not a Number)
+
+    true + true        <. 2
+    true + false       <. 1
+    NaN == NaN         <. false
+    NaN != NaN         <. true
+
+3. Logical Operators
+  &&   --> AND
+  ||   --> OR
+  !    --> NOT
+
+  x && y   --> If both are true then only it will true
+  x || y   --> if at least any one is true then it will return true
+
+  For logical operators:
+  zero  ---> false
+  non-zero   ---> true
+  empty string  ---> false
+  non-empty string  ---> true
+  null, undefined, NaN  ---> false
+
+
+Conditional Statements:
+------------------------
+1. if
+2. if-else
+3. if-else if
+Syntax:
+  if (b) {
+  action if b is true
+  }
+  else {
+  action if b is false
+  }
+
+
+
+Iterative Statements:
+----------------------
+To execute a group of statements iteratively
+
+DRY Principal: Don't Repeat Yourself
+
+1. While loop
+2. for loop
+
+
+Eg: To Print hello 10 times:
+
+for (var i=1; i<=10; i++){
+consol.log("Hello");
+}
+
+
+Eg: To print numbers divisible by 7 between 1 to 100;
+
+for (var i=7;  i <=100; i++){
+  if (i % 7 == 0){
+  console.log(i);
+  }
+}
+
+
+var x = 7
+while (x <=100){
+  if (x % 7 == 0){
+  consol.log(x);
+  x++;
+  }
+}
+
+
+Functions:
+--------------------
+
+function functionName(arguments){
+  line 1
+  line 2
+  line 3
+}
+
+functionName();
+
+
+
+To print Good Evening:
+function wish(){
+  console.log("Hello Friend, Good Evening")
+}
+
+wish()
+
+
+Function with arguments
+------------------------------
+arguments are inputs to the function
+var name = prompt("Enter your name: ")
+
+function wish(name){
+  console.log("Hello " + name + ", Good Evening")
+}
+
+wish(name)
+
+
+Function with Default value:
+---------------------------------
+var name = prompt("Enter your name: ")
+
+function wish(name = "Guest"){
+  console.log("Hello " + name + ", Good Evening")
+}
+
+wish(name)
+wish()
+
+Function with Return value:
+------------------------------
+1. To find the square of a even number
+
+
+
+
+Java Script Scope:
+------------------------
+1. Global Scope
+2. Local Scope
+
+The variable are which are declared outside of the function are having global scope and available for all functions.
+
+The variables are which are declared inside function are having local scope and variables for only that function.
+
+
+var x = 777  // global variable
+
+function f1(){
+  var x = 10  // local variable
+  console.log(x);
+}
+
+function f2(){
+  console.log(x)
+}
+
+function f3(){
+  x = 20;  // it is new declaration and it refers global copy
+  console.log(x);
+}
+
+f1()
+f2()
+f3()
+
+
+
+Higher Order function:
+----------------------
+def function(func): # Python
+  return func;
+
+The functions which can take another function as argument such type of special function Higher Order Function.
+
+setInterval()  // Predefined function
+
+setInterval(function, time_in_milliseconds)
+
+
+function singAsong(){
+  console.log("Ramulo Ramula...")
+  console.log("Rangamma mangamma...")
+}
+
+
+singAsong()
+
+setInterval(singAsong, 3000); // Execute this function on every 3000 milliseconds.
+clearInterval(1)  // To stop the above function .1 is the ID of the executed function
+
+
+Anonymous function:
+----------------------
+Nameless Function
+function(){
+  console.log("hello")
+}
+
+
+setInterval(function(){console.log("Anonymous function");}, time_in_milliseconds);
+
+
+JavaScript Arrays:
+----------------------
+
+An index collection of elements
+
+numbers = [10, 20, 30, 40]
+
+
+
+
+How to retrieve elements of the array:
+--------------------------------------
+1. while loop
+2. for loop
+3. for-of loop
+4.forEach() method
+
+
+1. while loop:
+------------------
+nums = [10, 20, 30, 40]
+
+var i = 0
+
+while (i < nums.length){
+  console.log(nums[i])
+  i++
+}
+
+2. for loop:
+------------------
+nums = [10, 20, 30, 40. 50, 60]
+for (var i = 0; i < nums.length; i++){
+  console.log(nums[i])
+}
+
+
+3. for-of loop:
+---------------------
+
+nums = [10, 20, 30, 40. 50, 60]
+for (num of nums){
+  console.log(num)
+}
+
+
+4.forEach() method:
+---------------------
+It is specially designed to retrieve the elements of an array.
+
+arrayObject.forEach(function)
+
+heroines = ['sunny', 'malaika', 'karian', 'kartina', 'kajol']
+
+function printElement(element){
+console.log("********************")
+console.log(element);
+console.log(**********************);
+}
+
+heroines.forEach(printElement);

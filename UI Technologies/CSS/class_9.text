@@ -1,0 +1,61 @@
+ctrl + shift + d :  Copy the current line
+ctrl + shift + c : Copy the full path
+ctrl + / : -- Comment the line
+
+# CSS
+Various Ways to define style for HTML Elements:
+------------------------------------------------
+1. In Line
+2. By Using Style Tag
+3. By Using External CSS file
+
+
+In Line:
+---------------
+<h1 style="color: red"> This is for CSS Demo </h1>
+
+
+By Using Style Tag:
+-------------------
+<style>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validations</title>
+    <!-- style tag -->
+    <style>
+      h1{
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color:blue"> This is for CSS Demo </h1>
+
+    <h1> This is for CSS Demo </h1>
+    <h1> This is for CSS Demo </h1>
+
+    <h1> This is for CSS Demo </h1>
+
+  </body>
+</html>
+
+
+
+Basic Structure of CSS File:
+-------------------------------
+tagname{
+property:value;
+}
+
+h1{
+  color:green;
+}
+
+We can include the css file by using the link tag
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
